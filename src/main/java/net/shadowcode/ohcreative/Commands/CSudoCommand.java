@@ -25,7 +25,7 @@ public class CSudoCommand implements CommandExecutor{
                    p.sendMessage(ChatColor.GOLD + "[" + ChatColor.BLUE + "Chat" + ChatColor.GOLD + "] " + ChatColor.DARK_RED + "You do not have permission to this command!");
                }
             } else {
-               p.sendMessage(ChatColor.GOLD + "[" + ChatColor.BLUE + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "Player not found!");
+               p.sendMessage(ChatColor.GOLD + "[" + ChatColor.DARK_RED + "Nemesis" + ChatColor.RESET + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "Player not found!");
             }
 
         } else {
