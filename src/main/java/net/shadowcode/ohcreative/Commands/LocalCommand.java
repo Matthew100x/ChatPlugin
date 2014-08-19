@@ -18,13 +18,13 @@ public class LocalCommand implements CommandExecutor {
             Player p = (Player) sender;
 
             if(PlayerManager.getChatMode(p).equals(ChatMode.LOCAL)) {
-                p.sendMessage(ChatColor.GOLD + "[" + ChatColor.BLUE + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "You are already in " + ChatColor.GREEN + "Local" + ChatColor.WHITE + "!");
+                p.sendMessage(ChatColor.GOLD + "[" + ChatColor.DARK_RED + "Nemesis" + ChatColor.RESET + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "You are already in " + ChatColor.GREEN + "Local" + ChatColor.WHITE + "!");
             } else {
                 PlayerManager.setChatMode(p, ChatMode.LOCAL);
-                p.sendMessage(ChatColor.GOLD + "[" + ChatColor.BLUE + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "You have changed to " + ChatColor.GREEN + "Local" + ChatColor.WHITE + "!");
+                p.sendMessage(ChatColor.GOLD + "[" + ChatColor.DARK_RED + "Nemesis" + ChatColor.RESET + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "You have changed to " + ChatColor.GREEN + "Local" + ChatColor.WHITE + "!");
             }
         } else {
-            sender.sendMessage(ChatColor.GOLD + "[" + ChatColor.BLUE + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "Console cannot chat!");
+            sender.sendMessage(ChatColor.GOLD + "[" + ChatColor.DARK_RED + "Nemesis" + ChatColor.RESET + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "Console cannot chat!");
         }
         return false;
     }
