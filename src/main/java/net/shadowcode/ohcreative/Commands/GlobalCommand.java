@@ -19,12 +19,12 @@ public class GlobalCommand implements CommandExecutor {
             Player p = (Player) sender;
 
             if(PlayerManager.getChatMode(p).equals(ChatMode.GLOBAL)) {
-              p.sendMessage(ChatColor.GOLD + "[" + ChatColor.BLUE + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "You are already in " + ChatColor.GREEN + "Global" + ChatColor.WHITE + "!");
+              p.sendMessage(ChatColor.GOLD + "[" + ChatColor.DARK_RED + "Nemesis" + ChatColor.RESET + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "You are already in " + ChatColor.GREEN + "Global" + ChatColor.WHITE + "!");
             } else {
                 PlayerManager.setChatMode(p, ChatMode.GLOBAL);
-                p.sendMessage(ChatColor.GOLD + "[" + ChatColor.BLUE + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "You have changed to " + ChatColor.GREEN + "Global" + ChatColor.WHITE + "!");            }
+                p.sendMessage(ChatColor.GOLD + "[" + ChatColor.DARK_RED + "Nemesis" + ChatColor.RESET + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "You have changed to " + ChatColor.GREEN + "Global" + ChatColor.WHITE + "!");            }
         } else {
-         sender.sendMessage(ChatColor.GOLD + "[" + ChatColor.BLUE + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "Console cannot chat!");
+         sender.sendMessage(ChatColor.GOLD + "[" + ChatColor.DARK_RED + "Nemesis" + ChatColor.RESET + "Chat" + ChatColor.GOLD + "] " + ChatColor.WHITE + "Console cannot chat!");
         }
         return false;
     }
