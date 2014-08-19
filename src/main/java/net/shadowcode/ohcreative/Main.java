@@ -1,5 +1,9 @@
 package net.shadowcode.ohcreative;
 
+import net.shadowcode.ohcreative.Commands.CSudoCommand;
+import net.shadowcode.ohcreative.Commands.GlobalCommand;
+import net.shadowcode.ohcreative.Commands.LocalCommand;
+import net.shadowcode.ohcreative.Commands.StaffCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -20,19 +24,16 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new PlayerManager(), this);
         pm.registerEvents(new ChatHandler(), this);
 
+        getCommand("global").setExecutor(new GlobalCommand());
+        getCommand("local").setExecutor(new LocalCommand());
+        getCommand("staff").setExecutor(new StaffCommand());
+        getCommand("csudo").setExecutor(new CSudoCommand());
     }
     public void onDisable() {
 
     }
 
-    public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args) {
-        if(sender instanceof Player) {
 
-        } else {
-            //CONSOLE NO CHANGE
-        }
-        return false;
-    }
 
 
 }

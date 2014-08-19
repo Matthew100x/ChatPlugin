@@ -17,13 +17,14 @@ import java.util.UUID;
  */
 public class PlayerManager implements Listener {
 
-    private static List<Player> players = new ArrayList<>();
-    private static HashMap<UUID, ChatMode> chatlist = new HashMap<>();
+    private static List<Player> players = new ArrayList<Player>();
+    private static HashMap<UUID, ChatMode> chatlist = new HashMap<UUID, ChatMode>();
 
 
     @EventHandler
     protected void onJoin(PlayerJoinEvent e) {
         players.add(e.getPlayer());
+        setChatMode(e.getPlayer(), ChatMode.GLOBAL);
     }
 
     @EventHandler

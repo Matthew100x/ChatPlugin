@@ -1,0 +1,12 @@
+name: ChatPlugin
+main: net.shadowcode.ohcreative.Main
+version: 1.0
+author: OhCreative
+
+commands:
+    global:
+      description: null
+    local:
+      description: null
+    staff:
+      description: null
